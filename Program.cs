@@ -9,7 +9,7 @@ bool toggleVisualize = false;
 
 while (true)
 {
-    // I know that it's not really what task intended me to do, but I think that it works much better as a toggle and not a button
+    // I know that it's not really what the task required me to do, but I think that it works much better as a toggle and not a button
     if (toggleVisualize)
         Console.WriteLine(parkingLot.Visualize());
 
