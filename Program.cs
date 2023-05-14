@@ -2,6 +2,7 @@
 
 using System.Runtime.CompilerServices;
 using TestApp;
+using TestApp.ParkingClasses;
 
 var parkingLot = new ParkingLot();
 

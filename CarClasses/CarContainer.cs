@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TestApp;
+namespace TestApp.CarClasses;
 
 public class CarContainer
 {
@@ -20,14 +20,18 @@ public class CarContainer
     public int? DriveAway(int id)
     {
         var car = Cars.FirstOrDefault(p => p.Id == id && p.IsParked);
-        
+
         if (car is null) return null;
 
         car.IsParked = false;
 
         return car.Id;
     }
-
+    /// <summary>
+    /// Ids are assigned chronologically to when they have entered the parking lot.
+    /// Can be changed to the order of the parking spaces if needed
+    /// </summary>
+    /// <returns></returns>
     public string ResetIds()
     {
         Cars.RemoveAll(p => !p.IsParked);
